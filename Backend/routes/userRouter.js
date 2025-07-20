@@ -5,7 +5,12 @@ const prisma = require('../prisma');
 const router = Router();
 
 router.get('/@me', authenticateToken, async (req, res) => {
-    res.json({user: req.user});
+    const blogs = await prisma.blog.findMany({ where: { authorID: req.user.userID } });
+    res.json({ user: {
+        userID: req.user.userID,
+        username: req.user.username,
+        isAdmin: req.user.isAdmin
+    }, blogs });
 });
 
 router.get('/:userID', async (req, res) => {
