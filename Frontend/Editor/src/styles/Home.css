@@ -1,0 +1,85 @@
+.Home {
+    padding: 2rem;
+}
+
+.Home ul {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.Home h1 {
+    width: 75%;
+    margin: auto;
+}
+
+.BlogCard {
+    background-color: var(--bg-color-1);
+    border: 1px solid var(--text-color-light);
+    list-style-type: none;
+    border-radius: 10px;
+    width: 75%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.BlogCard-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    gap: 2rem;
+    align-items: end;
+}
+
+.BlogCard-buttons a {
+    width: 3rem;
+    height: 3rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border: 1px solid var(--text-color-light);
+    border-radius: 4px;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BlogCard-buttons a:hover {
+    background-color: var(--bg-color-3);
+}
+
+.BlogCard-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+}
+
+.BlogCard-content h2 {
+    flex: 1;
+}
+
+.BlogCard-content p {
+    flex: 3;
+    color: var(--text-color-light);
+}
+
+.BlogCard-content span {
+    font-size: 0.75rem;
+    flex: 1;
+}
+
+.BlogCard-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;        /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    white-space: normal;          /* Allow wrapping */
+    width: 100%;                  /* Or remove width for natural flow */
+}

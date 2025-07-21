@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const API_BASE_URL = import.meta.env.VITE_BACKEND_URL
 
@@ -24,12 +26,18 @@ function BlogCard({blogData}) {
 
     return (
         <li className="BlogCard">
-            <h2>{blogData.heading}</h2>
-            <p style={{textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden", WebkitLineClamp: 3}}>{blogData.content}</p>
-            <i>{new Date(blogData.created).toLocaleString()}</i>
-            <div>
-                <Link to={`/${blogData.blogID}`}><button>Edit</button></Link>
-                <button onClick={() => handleDelete(blogData.blogID)}>Delete</button>
+            <div className="BlogCard-content">
+                <h2>{blogData.heading}</h2>
+                <p>{blogData.content}</p>
+                <span>Created: {new Date(blogData.created).toLocaleString()}</span>
+            </div>
+            <div className="BlogCard-buttons">
+                <Link to={`/${blogData.blogID}`}>
+                    <FontAwesomeIcon icon={faEdit}/>
+                </Link>
+                <Link onClick={() => handleDelete(blogData.blogID)}>
+                    <FontAwesomeIcon icon={faTrash}/>
+                </Link>
             </div>
         </li>
     )

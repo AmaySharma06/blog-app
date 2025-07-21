@@ -1,0 +1,67 @@
+.BlogEditor {
+    width: 70%;
+    margin: auto;
+    padding: 2rem;
+}
+
+.BlogEditor div {
+    display: flex;
+    gap: 2ch;
+}
+
+.BlogEditor h2 {
+    flex: 2;
+}
+
+.BlogEditor input {
+    flex: 12;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.BlogEditor-buttons {
+    flex: 1;
+}
+
+.BlogEditor-buttons > * {
+    border: 2px solid var(--text-color-dark);
+    height: 100%;
+    width: 8ch;
+}
+
+.BlogEditor-buttons * {
+    color: inherit;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--text-color-light);
+    color: var(--bg-color-1);
+}
+
+.BlogEditor-buttons *:hover {
+    background-color: var(--text-color-dark);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.BlogEditor textarea {
+    width: 100%;
+    margin-top: 2rem;
+    min-height: 60vh;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid var(--text-color-light);
+    font-family: inherit;
+    padding: 1.5rem;
+    font-size: 1rem;
+}
+
+.BlogEditor textarea:focus {
+    border: 2px solid var(--text-color-dark);
+}

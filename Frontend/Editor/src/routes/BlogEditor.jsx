@@ -1,5 +1,6 @@
-import { Form, useLoaderData } from "react-router-dom";
+import { Form, Link, useLoaderData } from "react-router-dom";
 import { useState } from "react";
+import '../styles/BlogEditor.css'
 
 function BlogEditor() {
     const blogData = useLoaderData();
@@ -9,9 +10,15 @@ function BlogEditor() {
     return (
         <div className="BlogEditor">
             <Form method="POST">
-                <input name="heading" value={heading} onChange={(e)=>setHeading(e.target.value)} />
+                <div>
+                    <h2>Heading: </h2>
+                    <input name="heading" value={heading} onChange={(e)=>setHeading(e.target.value)} />
+                    <div className="BlogEditor-buttons">
+                        <button type="submit">Submit</button>
+                        <Link to='/'>Back</Link>
+                    </div>
+                </div>
                 <textarea name="content" value={content} onChange={(e)=>setContent(e.target.value)}/>
-                <button type="submit">Submit</button>
             </Form>
         </div>
     )

@@ -1,19 +1,20 @@
 import { NavLink } from "react-router-dom";
+import '../styles/Navbar.css'
 
 function NavBar() {
     return (
         <nav>
             <div className="nav-left">
-                <h1>Blog Publisher</h1>
+                <h2>Blog Publisher</h2>
             </div>
             <div className="nav-middle">
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/new'>New Blog</NavLink>
-                <NavLink to='/profile'>Profile</NavLink>
+                <a href="https://github.com/AmaySharma06/blog-app" target="blank">GitHub</a>
             </div>
             <div className="nav-right">
-                <h2>{localStorage.getItem("username")}</h2>
-                <NavLink to='/login'><button>Logout</button></NavLink>
+                <span>{localStorage.getItem("username")}</span>
+                <NavLink to='/login'><button>Log Out</button></NavLink>
             </div>
         </nav>
     )

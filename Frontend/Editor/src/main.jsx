@@ -8,6 +8,7 @@ import Login from './routes/auth/Login.jsx'
 import {adminLoader, loginAction} from './routes/auth/authutils.js'
 import { editAction, newAction } from './routes/apiutils.js'
 import Profile from './routes/Profile.jsx'
+import './index.css'
 
 const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
 

@@ -3,7 +3,7 @@ import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function Root() {
-
+    
     return (
         <div className="Root">
             <NavBar />
