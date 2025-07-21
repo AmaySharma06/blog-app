@@ -1,0 +1,68 @@
+.CommentSection {
+    border-top: 1px solid var(--text-color-light);
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0 0rem;
+}
+
+.CommentEditor {
+    width: 100%;
+    position: relative;
+}
+
+.CommentEditor textarea {
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid var(--text-color-light);
+    font-family: inherit;
+    padding: 0.5rem;
+    font-size: 1rem;
+    height: 6rem;
+    resize: none;
+}
+
+.CommentEditor button {
+    position: absolute;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    border: 1px solid var(--text-color-dark);
+    width: 6ch;
+    padding: 0 0.25rem;
+    z-index: 2;
+    background-color: var(--bg-color-2);
+    border-radius: 4px;
+}
+
+.CommentEditor button:hover {
+    cursor: pointer;
+}
+
+.CommentEditor textarea:focus {
+    border: 2px solid var(--text-color-dark);
+}
+
+.CommentCard {
+    margin: 2rem 0;
+}
+
+.CommentCard > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.CommentCard-top {
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+.CommentCard-user {
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.CommentCard-date {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--text-color-light);
+}

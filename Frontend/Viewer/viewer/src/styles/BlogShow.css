@@ -1,0 +1,12 @@
+.BlogShow {
+    background-color: var(--bg-color-1);
+    width: 50%;
+    min-height: 90vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    white-space: pre-wrap;
+    gap: 2rem;
+}
